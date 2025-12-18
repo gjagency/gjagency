@@ -1,65 +1,80 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            agency
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="bg-zinc-50 dark:bg-black font-sans text-black dark:text-zinc-50">
+      {/* Hero Section con imagen de fondo */}
+      <section
+        className="min-h-screen flex flex-col items-center justify-center text-white text-center py-16 relative"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OXwwfDF8c2VhcmNofDh8fGJ1c2luZXNzfGVufDB8fHx8fDE2Njg1NjYxOTc&ixlib=rb-1.2.1&q=80&w=1080')",  // URL de imagen pública
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+        id="hero"
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div> {/* Capa negra con opacidad */}
+        <h1 className="text-5xl font-bold mb-4 relative">G&J Agency</h1>
+        <p className="text-lg max-w-2xl mb-6 relative">En G&J Agency, ofrecemos desarrollo de software personalizado, soluciones móviles y estrategias digitales diseñadas para el éxito de tu empresa.</p>
+        <a
+          href="#contact"
+          className="py-3 px-8 bg-white text-blue-700 font-semibold rounded-full transition-colors hover:bg-blue-800 hover:text-white relative"
+        >
+          ¡Hablemos de tu proyecto!
+        </a>
+      </section>
+
+      {/* Resto del contenido */}
+      <section className="py-16 px-8" id="services">
+        <h2 className="text-4xl font-bold text-center mb-15">Nuestros Servicios</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Servicio 1 */}
+          <div className="text-center p-6 bg-black shadow-lg rounded-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-2xl font-semibold mb-4">Desarrollo Web</h3>
+            <p>Diseñamos y desarrollamos sitios web modernos, rápidos y fáciles de usar para que tu empresa destaque en la web.</p>
+          </div>
+          {/* Servicio 2 */}
+          <div className="text-center p-6 bg-black shadow-lg rounded-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-2xl font-semibold mb-4">Consultoría Digital</h3>
+            <p>Te ayudamos a mejorar tu presencia digital y a optimizar procesos para llevar tu negocio al siguiente nivel.</p>
+          </div>
+          {/* Servicio 3 */}
+          <div className="text-center p-6 bg-black shadow-lg rounded-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-2xl font-semibold mb-4">Desarrollo Móvil</h3>
+            <p>Desarrollamos aplicaciones móviles personalizadas para que tu negocio llegue directamente a la palma de tus clientes.</p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+
+      {/* Contacto */}
+      <section className="py-16 px-8 bg-zinc-100 text-black" id="contact">
+      <h2 className="text-4xl font-black text-center mb-12">Contacto</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {/* Proyecto 1 */}
+          <div className="text-center p-6 bg- shadow-lg rounded-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-xl font-semibold">Aplicación de E-commerce</h3>
+            <p>Creación de una plataforma de comercio electrónico para una tienda online que ofrece productos físicos y digitales.</p>
+          </div>
+          {/* Proyecto 2 */}
+          <div className="text-center p-6 bg-bold shadow-lg rounded-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-xl font-semibold">Sistema de Gestión Interno</h3>
+            <p>Desarrollamos un sistema de gestión para optimizar la administración interna y los flujos de trabajo de una empresa.</p>
+          </div>
+          {/* Proyecto 3 */}
+          <div className="text-center p-6 bg-bold shadow-lg rounded-lg hover:shadow-xl transition-shadow">
+            <h3 className="text-xl font-semibold">Aplicación Móvil de Fitness</h3>
+            <p>Desarrollo de una app móvil para monitorear rutinas y seguimiento de entrenamientos personalizados.</p>
+          </div>
         </div>
-      </main>
+      </section>
+
+
+      {/* Footer */}
+      <footer className="bg-black text-white py-6 px-8 text-center">
+        <p>&copy; {new Date().getFullYear()} G&J Agency. Todos los derechos reservados.</p>
+        <p className="mt-2">Síguenos en nuestras redes sociales: <a href="https://twitter.com" target="_blank" className="text-blue-400">Facebook
+        </a> | <a href="https://linkedin.com" target="_blank" className="text-blue-400">Instagram</a></p>
+      </footer>
     </div>
   );
 }
