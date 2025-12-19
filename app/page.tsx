@@ -183,13 +183,80 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black text-white py-6 px-8 text-center">
-        <p>
-          &copy; {new Date().getFullYear()} G&J Agency. Todos los derechos
-          reservados.
-        </p>
-      </footer>
+      <footer className="bg-black text-white py-12 px-8">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    {/* Marca */}
+    <div>
+      <h3 className="text-2xl font-bold mb-4">G&J Agency</h3>
+      <p className="text-zinc-400 text-sm">
+        Desarrollamos soluciones digitales a medida para ayudar a empresas
+        y emprendedores a crecer en el mundo digital.
+      </p>
+    </div>
+
+    {/* Servicios */}
+    <div>
+      <h4 className="font-semibold mb-4">Servicios</h4>
+      <ul className="space-y-2 text-zinc-400 text-sm">
+        <li>Desarrollo Web</li>
+        <li>Aplicaciones Móviles</li>
+        <li>Sistemas a Medida</li>
+        <li>Consultoría Digital</li>
+      </ul>
+    </div>
+
+    {/* Enlaces */}
+    <div>
+      <h4 className="font-semibold mb-4">Enlaces</h4>
+      <ul className="space-y-2 text-zinc-400 text-sm">
+        <li><a href="#services" className="hover:text-white">Servicios</a></li>
+        <li><a href="#portfolio" className="hover:text-white">Portafolio</a></li>
+        <li><a href="#contact" className="hover:text-white">Contacto</a></li>
+      </ul>
+    </div>
+
+    {/* Contacto */}
+    <div>
+      <h4 className="font-semibold mb-4">Contacto</h4>
+      <ul className="space-y-2 text-zinc-400 text-sm">
+        <li>📍 Argentina</li>
+        <li>💬 WhatsApp: +54 2920 601338</li>
+        <li>✉️ gjagencysoftware@gmail.com</li>
+      </ul>
+
+      <div className="flex gap-4 mt-4">
+        <a
+          href="https://wa.me/542920601338"
+          target="_blank"
+          className="hover:text-green-400"
+        >
+          WhatsApp
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          className="hover:text-blue-400"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          className="hover:text-sky-400"
+        >
+          Twitter
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* Línea inferior */}
+  <div className="border-t border-zinc-800 mt-10 pt-6 text-center text-zinc-500 text-sm">
+    © {new Date().getFullYear()} G&J Agency. Todos los derechos reservados.
+  </div>
+</footer>
+
     </div>
   );
 }
