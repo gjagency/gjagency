@@ -134,6 +134,7 @@ export default function Home() {
             "Next.js",
             "Node.js",
             "Django",
+            "Flutter",
             "Firebase",
             "PostgreSQL",
             "SqlServer",
