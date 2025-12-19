@@ -122,34 +122,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tecnologías */}
-      <section className="py-20 px-8 bg-zinc-100 text-black">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Tecnologías
-        </h2>
+     {/* Tecnologías */}
+<section className="py-20 px-8 bg-zinc-900 text-white">
+  <h2 className="text-4xl font-bold text-center mb-6">
+    Tecnologías que usamos
+  </h2>
 
-        <div className="flex flex-wrap justify-center gap-6 text-lg font-semibold">
-          {[
-            "React",
-            "Next.js",
-            "Node.js",
-            "Django",
-            "Flutter",
-            "Firebase",
-            "PostgreSQL",
-            "SqlServer",
-            "AWS",
-            "Y mucho mas!",
-          ].map((tech, i) => (
-            <span
-              key={i}
-              className="px-6 py-3 bg-black text-white rounded-full"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </section>
+  <p className="text-center text-zinc-400 mb-14 max-w-2xl mx-auto">
+    Utilizamos tecnologías modernas, seguras y escalables para construir
+    productos digitales de alto rendimiento.
+  </p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+    {[
+      {
+        title: "Frontend",
+        techs: "React · Next.js · Tailwind",
+        desc: "Interfaces rápidas, modernas y optimizadas para conversión.",
+      },
+      {
+        title: "Backend",
+        techs: "Node.js · Django",
+        desc: "APIs seguras y sistemas escalables.",
+      },
+      {
+        title: "Mobile",
+        techs: "Flutter",
+        desc: "Aplicaciones móviles multiplataforma.",
+      },
+      {
+        title: "Bases de Datos",
+        techs: "PostgreSQL · SQL Server · Firebase",
+        desc: "Gestión eficiente y segura de datos.",
+      },
+      {
+        title: "Cloud",
+        techs: "AWS · Deploys escalables",
+        desc: "Infraestructura confiable y de alto rendimiento.",
+      },
+      {
+        title: "Seguridad",
+        techs: "Autenticación · Roles · Backups",
+        desc: "Protección de datos y accesos.",
+      },
+      {
+        title: "Performance",
+        techs: "SEO · Optimización",
+        desc: "Velocidad y posicionamiento en buscadores.",
+      },
+      {
+        title: "Más",
+        techs: "Y mucho más…",
+        desc: "Nos adaptamos a las necesidades del proyecto.",
+      },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="bg-zinc-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition"
+      >
+        <h3 className="text-xl font-semibold mb-2">
+          {item.title}
+        </h3>
+        <p className="text-blue-400 font-medium mb-2">
+          {item.techs}
+        </p>
+        <p className="text-sm text-zinc-400">
+          {item.desc}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* CTA */}
       <section className="py-24 px-8 bg-blue-700 text-white text-center">
