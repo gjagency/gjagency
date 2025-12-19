@@ -29,7 +29,7 @@ export default function Home() {
             ¡Hablemos!
           </a>
           <a
-            href="#portfolio"
+            href="#services"
             className="py-3 px-8 bg-white text-blue-700 font-semibold rounded-full hover:bg-blue-800 hover:text-white transition"
           >
             Servicios
@@ -44,112 +44,126 @@ export default function Home() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Servicio 1 */}
-          <div className="bg-black text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-            <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-              alt="Desarrollo Web"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6 text-center">
-              <h3 className="text-2xl font-semibold mb-4">Desarrollo Web</h3>
-              <p>
-                Sitios web modernos, rápidos y optimizados para convertir
-                visitantes en clientes.
-              </p>
-            </div>
-          </div>
-
-          {/* Servicio 2 */}
-          <div className="bg-black text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-              alt="Consultoría Digital"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6 text-center">
-              <h3 className="text-2xl font-semibold mb-4">Consultoría Digital</h3>
-              <p>
-                Estrategias digitales para mejorar procesos y escalar tu
-                negocio.
-              </p>
-            </div>
-          </div>
-
-          {/* Servicio 3 */}
-          <div className="bg-black text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-            <img
-              src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
-              alt="Desarrollo Móvil"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6 text-center">
-              <h3 className="text-2xl font-semibold mb-4">Desarrollo Móvil</h3>
-              <p>
-                Apps móviles personalizadas para Android y iOS.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portafolio */}
-      <section className="py-16 px-8 bg-zinc-100" id="portfolio">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Portafolio
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {[
             {
-              title: "E-commerce",
-              img: "https://images.unsplash.com/photo-1515169067865-5387ec356754",
-              desc: "Plataforma de ventas online moderna y escalable.",
+              title: "Desarrollo Web",
+              img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+              desc: "Sitios web rápidos, modernos y enfocados en conversión.",
             },
             {
-              title: "Sistema de Gestión",
-              img: "https://images.unsplash.com/photo-1556155092-8707de31f9c4",
-              desc: "Optimización de procesos internos empresariales.",
+              title: "Consultoría Digital",
+              img: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+              desc: "Estrategias digitales para optimizar procesos y escalar.",
             },
             {
-              title: "App Fitness",
-              img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
-              desc: "Aplicación móvil para entrenamientos personalizados.",
+              title: "Desarrollo Móvil",
+              img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+              desc: "Apps móviles a medida para Android y iOS.",
             },
-            {
-              title: "Marketplace",
-              img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-              desc: "Marketplace con múltiples vendedores.",
-            },
-            {
-              title: "Dashboard Admin",
-              img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-              desc: "Panel de control con métricas en tiempo real.",
-            },
-            {
-              title: "App Salud",
-              img: "https://images.unsplash.com/photo-1580281657527-47c5a5d7a7c5",
-              desc: "Seguimiento de hábitos y bienestar.",
-            },
-          ].map((project, index) => (
+          ].map((service, i) => (
             <div
-              key={index}
+              key={i}
               className="bg-black text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
             >
-              <img
-                src={project.img}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
+              <img src={service.img} className="w-full h-48 object-cover" />
               <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold mb-2">
-                  {project.title}
-                </h3>
-                <p>{project.desc}</p>
+                <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+                <p>{service.desc}</p>
               </div>
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Cómo trabajamos */}
+      <section className="py-20 px-8 bg-black text-white">
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Cómo Trabajamos
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center">
+          {[
+            "Análisis",
+            "Diseño",
+            "Desarrollo",
+            "Testing",
+            "Lanzamiento",
+          ].map((step, i) => (
+            <div key={i} className="p-6 bg-zinc-900 rounded-lg">
+              <span className="text-3xl font-bold block mb-2">
+                {i + 1}
+              </span>
+              <p className="font-semibold">{step}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Por qué elegirnos */}
+      <section className="py-20 px-8">
+        <h2 className="text-4xl font-bold text-center mb-12">
+          ¿Por qué elegirnos?
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-black">
+        {[
+            "Soluciones a medida",
+            "Comunicación directa",
+            "Enfoque en resultados",
+            "Soporte continuo",
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="p-6 bg-white shadow-lg rounded-lg"
+            >
+              <p className="font-semibold">{item}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Tecnologías */}
+      <section className="py-20 px-8 bg-zinc-100 text-black">
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Tecnologías
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-6 text-lg font-semibold">
+          {[
+            "React",
+            "Next.js",
+            "Node.js",
+            "Django",
+            "Firebase",
+            "PostgreSQL",
+            "SqlServer",
+            "AWS",
+            "Y mucho mas!",
+          ].map((tech, i) => (
+            <span
+              key={i}
+              className="px-6 py-3 bg-black text-white rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 px-8 bg-blue-700 text-white text-center">
+        <h2 className="text-4xl font-bold mb-6">
+          ¿Tenés una idea en mente?
+        </h2>
+        <p className="mb-8 text-lg">
+          Nosotros la convertimos en un producto digital real.
+        </p>
+        <a
+          href="#contact"
+          className="bg-white text-blue-700 px-10 py-4 rounded-full font-semibold hover:bg-zinc-200 transition"
+        >
+          Contactanos
+        </a>
       </section>
 
       {/* Contacto */}
