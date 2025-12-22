@@ -7,7 +7,7 @@ export default function Home() {
         className="min-h-screen flex flex-col items-center justify-center text-white text-center py-16 relative"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=1350&q=80')",
+          "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -47,19 +47,21 @@ export default function Home() {
           {[
             {
               title: "Desarrollo Web",
-              img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+              img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1350&q=80",
               desc: "Sitios web rápidos, modernos y enfocados en conversión.",
             },
             {
               title: "Consultoría Digital",
-              img: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+              img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80",
               desc: "Estrategias digitales para optimizar procesos y escalar.",
             },
+            
             {
               title: "Desarrollo Móvil",
-              img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+              img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1350&q=80",
               desc: "Apps móviles a medida para Android y iOS.",
             },
+            
           ].map((service, i) => (
             <div
               key={i}
@@ -125,11 +127,11 @@ export default function Home() {
      {/* Tecnologías */}
 <section className="py-20 px-8 bg-zinc-900 text-white">
   <h2 className="text-4xl font-bold text-center mb-6">
-    Tecnologías que usamos
+    Algunas tecnologías que utilizamos
   </h2>
 
   <p className="text-center text-zinc-400 mb-14 max-w-2xl mx-auto">
-    Utilizamos tecnologías modernas, seguras y escalables para construir
+    Tecnologías modernas, seguras y escalables para construir
     productos digitales de alto rendimiento.
   </p>
 
@@ -137,7 +139,7 @@ export default function Home() {
     {[
       {
         title: "Frontend",
-        techs: "React · Next.js · Tailwind",
+        techs: "React · Next.js · Tailwind · TypeScript · SEO · Performance",
         desc: "Interfaces rápidas, modernas y optimizadas para conversión.",
       },
       {
@@ -147,8 +149,8 @@ export default function Home() {
       },
       {
         title: "Mobile",
-        techs: "Flutter",
-        desc: "Aplicaciones móviles multiplataforma.",
+        techs: "Flutter · Dart · Firebase · APIs",
+        desc: "Apps móviles multiplataforma para Android e iOS.",
       },
       {
         title: "Bases de Datos",
@@ -189,6 +191,43 @@ export default function Home() {
         <p className="text-sm text-zinc-400">
           {item.desc}
         </p>
+      </div>
+    ))}
+  </div>
+</section>
+{/* Freelancer / Remote */}
+<section className="py-20 px-8 bg-white text-black">
+  <h2 className="text-4xl font-bold text-center mb-6">
+   Adémas trabajamos como freelancers remotos
+  </h2>
+
+  <p className="text-center text-zinc-600 max-w-3xl mx-auto mb-14">
+    Colaboramos con empresas, startups y emprendedores de todo el mundo.
+    Nos integramos a tu equipo o desarrollamos tu proyecto de punta a punta,
+    con comunicación directa y resultados reales.
+  </p>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    {[
+      {
+        title: "Contratación flexible",
+        desc: "Por proyecto, por horas o modalidad mensual. Nos adaptamos a tu necesidad.",
+      },
+      {
+        title: "Comunicación directa",
+        desc: "Hablás directamente con los desarrolladores, sin intermediarios.",
+      },
+      {
+        title: "Entrega rápida",
+        desc: "Metodologías ágiles, entregas semanales y feedback constante.",
+      },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="p-8 bg-zinc-50 rounded-xl shadow hover:shadow-lg transition"
+      >
+        <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
+        <p className="text-zinc-600">{item.desc}</p>
       </div>
     ))}
   </div>
@@ -266,32 +305,10 @@ export default function Home() {
       <h4 className="font-semibold mb-4">Contacto</h4>
       <ul className="space-y-2 text-zinc-400 text-sm">
         <li>📍 Argentina</li>
-        <li>💬 WhatsApp: +54 2920 601338</li>
         <li>✉️ gjagencysoftware@gmail.com</li>
       </ul>
 
       <div className="flex gap-4 mt-4">
-        <a
-          href="https://wa.me/542920601338"
-          target="_blank"
-          className="hover:text-green-400"
-        >
-          WhatsApp
-        </a>
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          className="hover:text-blue-400"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://twitter.com"
-          target="_blank"
-          className="hover:text-sky-400"
-        >
-          Twitter
-        </a>
       </div>
     </div>
   </div>
