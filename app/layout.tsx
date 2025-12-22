@@ -13,12 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "G&J Agency",
-  description: "G&J Agency",
+  title: "G&J Agency | Desarrollo web, apps y soluciones digitales",
+  description: "G&J Agency - Agencia de desarrollo web y móvil. Creamos soluciones digitales a medida para empresas y emprendedores.",
   verification: {
     google: "bUNZLv40-Gu9ZQCPbEqFzp4IULdYgkwQr4Ssqcd6OGU",
   },
 };
+
 
 export default function RootLayout({
   children,
