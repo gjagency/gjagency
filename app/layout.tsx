@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "G&J Agency",
   description: "G&J Agency",
+  verification: {
+    google: "bUNZLv40-Gu9ZQCPbEqFzp4IULdYgkwQr4Ssqcd6OGU",
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
