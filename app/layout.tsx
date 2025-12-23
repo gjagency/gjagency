@@ -42,6 +42,26 @@ export default function RootLayout({
 
             gtag('config', 'AW-17824852621');`}
         </script>
+        <script>
+            {`
+                function gtag_report_conversion(url) {
+                    var callback = function () {
+                        if (typeof(url) != 'undefined') {
+                        window.location = url;
+                        }
+                    };
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17824852621/1RTUCIa12NUbEI3VxrNC',
+                        'value': 1.0,
+                        'currency': 'ARS',
+                        'event_callback': callback
+                    });
+                    return false;
+                }
+
+                window._gtag_report_conversion = gtag_report_conversion
+            `}
+        </script>
         
         {children}
       </body>
