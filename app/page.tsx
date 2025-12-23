@@ -45,22 +45,22 @@
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
-              {
+            `  {
                 title: "Desarrollo Web",
                 img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1350&q=80",
-                desc: "Sitios web rápidos, modernos y enfocados en conversión.",
+                desc: "Diseñamos sitios web rápidos, modernos y optimizados para convertir visitas en clientes.",
               },
               {
-                title: "Consultoría Digital",
-                img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80",
-                desc: "Estrategias digitales para optimizar procesos y escalar.",
+                title: "E-commerce",
+                img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1350&q=80",
+                desc: "Creamos tiendas online seguras y escalables para que vendas tus productos las 24 horas.",
               },
-              
               {
                 title: "Desarrollo Móvil",
                 img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1350&q=80",
-                desc: "Apps móviles a medida para Android y iOS.",
-              },
+                desc: "Desarrollamos aplicaciones móviles intuitivas y eficientes para Android y iOS.",
+              },`
+
               
             ].map((service, i) => (
               <div
