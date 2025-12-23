@@ -45,7 +45,7 @@
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
-            `  {
+              {
                 title: "Desarrollo Web",
                 img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1350&q=80",
                 desc: "Diseñamos sitios web rápidos, modernos y optimizados para convertir visitas en clientes.",
@@ -59,7 +59,7 @@
                 title: "Desarrollo Móvil",
                 img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1350&q=80",
                 desc: "Desarrollamos aplicaciones móviles intuitivas y eficientes para Android y iOS.",
-              },`
+              },
 
               
             ].map((service, i) => (
