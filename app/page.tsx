@@ -1,4 +1,4 @@
-import { ContactWhatsappButton } from "./components/contactWhatsappButton";
+import { ContactForm } from "./ContactForm";
 
   export default function Home() {
     return (
@@ -259,7 +259,7 @@ import { ContactWhatsappButton } from "./components/contactWhatsappButton";
           </h2>
 
           <div className="flex justify-center">
-            <ContactWhatsappButton />
+            <ContactForm />
           </div>
         </section>
 
