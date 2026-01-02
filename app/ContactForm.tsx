@@ -14,17 +14,10 @@ export function ContactForm() {
 
     const name = data.get("name");
     const email = data.get("email");
-    const company = data.get("company");
-    const budget = data.get("budget");
-    const message = data.get("message");
 
     const text = `Hola, soy ${name}.
-Empresa: ${company}
 Email: ${email}
-Presupuesto estimado: ${budget}
-
-Proyecto:
-${message}`;
+`;
 
     const phone = "+542920601338"; 
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(
@@ -76,9 +69,8 @@ ${message}`;
         {loading ? "Enviando..." : "Enviar solicitud"}
       </button>
 
-      <p className="text-xs text-zinc-500 text-center">
-        ⚠️ Solo trabajamos con empresas y proyectos con presupuesto definido.
-      </p>
+      {/* <p className="text-xs text-zinc-500 text-center">
+      </p> */}
     </form>
   );
 }
