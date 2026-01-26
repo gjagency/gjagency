@@ -21,14 +21,6 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
-        if ("_gtag_report_conversion" in window && typeof window._gtag_report_conversion === 'function') {
-            window._gtag_report_conversion()
-        }
-    } catch (error) {
-        console.error("Error al llamar a _gtag_report_conversion:", error);
-    }
-
-    try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -49,6 +41,14 @@ export function ContactForm() {
       alert('Hubo un error al enviar el formulario. Por favor intentá de nuevo o escribinos a gjagencysoftware@gmail.com');
     } finally {
       setIsSubmitting(false);
+    }
+
+    try {
+        if ("_gtag_report_conversion" in window && typeof window._gtag_report_conversion === 'function') {
+            window._gtag_report_conversion()
+        }
+    } catch (error) {
+        console.error("Error al llamar a _gtag_report_conversion:", error);
     }
   };
 
